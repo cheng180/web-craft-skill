@@ -1,5 +1,5 @@
 ﻿# =========================================================
-# install.ps1 — 把 site-template-mirror 装到本机的各个 AI agent
+# install.ps1 — 把 web-craft-skill 装到本机的各个 AI agent
 #
 # 各 agent 的 skills 目录约定（实测/官方文档）：
 #   claude    ~/.claude/skills/<name>/SKILL.md      用户级，所有项目
@@ -23,7 +23,7 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
-$SkillName = "site-template-mirror"
+$SkillName = "web-craft-skill"
 $Source = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
 
 if (-not (Test-Path (Join-Path $Source "SKILL.md"))) {
@@ -104,6 +104,6 @@ if (($head -join "`n") -match "name:\s*$SkillName") {
 
 Write-Host ""
 Write-Host "下一步：" -ForegroundColor Cyan
-Write-Host "  Claude Code : 重启会话后执行 /skills 查看，或直接说“用 site-template-mirror 把某站镜像下来”"
-Write-Host "  Codex       : 重启后 /skills 查看，用 `$site-template-mirror 显式调用"
+Write-Host "  Claude Code : 重启会话后执行 /skills 查看，或直接说“用 web-craft-skill 把某站镜像下来”"
+Write-Host "  Codex       : 重启后 /skills 查看，用 `$web-craft-skill 显式调用"
 Write-Host "  Reasonix    : 直接说触发词即可，如“照着这个网站做一个”"

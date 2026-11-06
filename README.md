@@ -1,8 +1,8 @@
-# 精美网站模板快速制作
+# 精美网页制作 skill
 
 > 别再让 AI 从一张白纸开始画页面了。**给它一个链接。**
 
-`site-template-mirror` · 一个把现成网站整套搬到本地、再按你的意思改的 skill。
+`web-craft-skill` · 一个把现成网站整套搬到本地、再按你的意思改的 skill。
 
 ---
 
@@ -126,7 +126,7 @@ python scripts/serve.py --root ./mirror --port 5174
 
 ## 安装
 
-Skill 就是一个目录：`<skills 根>/site-template-mirror/SKILL.md`。
+Skill 就是一个目录：`<skills 根>/web-craft-skill/SKILL.md`。
 目录名必须和 `name:` 字段一致，往 skills 目录里丢一个裸 `.md` 是无效的。
 
 ### 最快：让 agent 自己装
@@ -134,11 +134,11 @@ Skill 就是一个目录：`<skills 根>/site-template-mirror/SKILL.md`。
 把仓库地址丢给它：
 
 ```text
-请把这个 skill 安装到本机：https://github.com/cheng180/site-template-mirror
-skill 名 site-template-mirror。复制到宿主对应的 skills 目录：
-  Claude Code → ~/.claude/skills/site-template-mirror
-  Codex       → ${CODEX_HOME:-~/.codex}/skills/site-template-mirror
-                以及 ~/.agents/skills/site-template-mirror
+请把这个 skill 安装到本机：https://github.com/cheng180/web-craft-skill
+skill 名 web-craft-skill。复制到宿主对应的 skills 目录：
+  Claude Code → ~/.claude/skills/web-craft-skill
+  Codex       → ${CODEX_HOME:-~/.codex}/skills/web-craft-skill
+                以及 ~/.agents/skills/web-craft-skill
 装完 ls 目标目录并 head -5 SKILL.md 给我确认。已存在就先问我，别覆盖。
 ```
 
@@ -153,10 +153,10 @@ powershell -File scripts/install.ps1 -Link            # 符号链接，git pull 
 ### 手动
 
 ```bash
-git clone https://github.com/cheng180/site-template-mirror.git /tmp/stm
-cp -r /tmp/stm ~/.claude/skills/site-template-mirror          # Claude Code
-cp -r /tmp/stm ~/.agents/skills/site-template-mirror          # Agent Skills 通用
-cp -r /tmp/stm ~/.codex/skills/site-template-mirror           # Codex
+git clone https://github.com/cheng180/web-craft-skill.git /tmp/stm
+cp -r /tmp/stm ~/.claude/skills/web-craft-skill          # Claude Code
+cp -r /tmp/stm ~/.agents/skills/web-craft-skill          # Agent Skills 通用
+cp -r /tmp/stm ~/.codex/skills/web-craft-skill           # Codex
 ```
 
 各宿主路径差异、Codex `$skill-installer`、marketplace 发布、验证与排错：
